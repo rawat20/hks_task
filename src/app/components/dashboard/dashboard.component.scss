@@ -1,0 +1,113 @@
+.navSide {
+    height: 85vh;
+    border-radius: 0 !important;
+    border: 1px solid #30A8F5;
+}
+
+.midSide {
+    height: 85vh;
+}
+
+.rightSide {
+    height: 42vh;
+    width: 95%;
+}
+
+.midCenSide {
+    height: 30vh;
+    width: 100%;
+}
+
+.headerCard {
+    color: #30A8F5;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.notification {
+    color: #30A8F5;
+    text-decoration: none;
+    padding: 6px 8px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+
+
+.notification .badge {
+    position: absolute;
+    top: -4px;
+    right: -9px;
+    padding: 4px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+
+.sampleHr {
+    margin-top: 0rem !important;
+    background-color: #30A8F5;
+    height: 0.05rem;
+    margin-bottom: 0rem !important;
+}
+
+.notiText {
+    font-size: 10px !important;
+    font-weight: bold;
+    color: #666666;
+}
+
+.timeText {
+    color: #30A8F5;
+    font-size: 8px !important;
+    font-weight: bold;
+}
+
+.over {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 106% !important;
+}
+
+.productionList {
+    color: #30A8F5;
+    font-size: 15px !important;
+    font-weight: bold;
+    margin-left: 70px;
+}
+
+.notSelectedproductionList {
+    color: #666666;
+    font-size: 15px !important;
+    font-weight: bold;
+    margin-left: 70px;
+}
+
+ul.list li {
+    width: auto;
+    float: left;
+}
+
+.box {
+    width: 330px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.block {
+    display: inline-block;
+    /* background-color: #abc; */
+    left: 0;
+    width: 35%;
+    font-size: small;
+    /* height: 90px; */
+    /* margin: 5px; */
+    /* margin-left: 10px;*/
+}
+
+#left:hover,
+#right:hover,
+.block:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,63 @@
+<ng-container>
+    <div class="loginForm">
+        <div class="card">
+            <div class="card-header font-weight-bold" style="font-size: 25px;">
+                Login
+            </div>
+            <div class="card-body">
+                <form #hubForm="ngForm" (ngSubmit)="submit(hubForm)">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <div class="form-group">
+                                <label for="" class="font-weight-bold">Email</label>
+                                <input type="text" class="form-control" name="MAIL_ID" [(ngModel)]="MAIL_ID"
+                                    #mail="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}"
+                                     required>
+                                <small class="text-danger font-weight-bold"
+                                    *ngIf="mail.invalid && (mail.dirty || mail.touched || hubForm.submitted)">
+                                    <small *ngIf="mail.errors?.['required']">
+                                        Please Enter Email
+                                    </small>
+                                    <small *ngIf="mail.errors?.['pattern']">
+                                        Please Enter Valid Email Address (Ex: abcd@gmail.com)
+                                    </small>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <div class="form-group">
+                                <label for="" class="font-weight-bold">Password</label>
+                                <div class="input-group">
+                                    <input [type]="hide ? 'password' : 'text'" class="form-control" id="password1"
+                                        name="pass" [(ngModel)]="PASSWORD" #ps="ngModel" required showHideInput>
+                                    <div class="input-group-append">
+                                        <button class="btn border" type="button" (click)="showPassword()">
+                                            <i class="fa fa-eye-slash" *ngIf="hide" aria-hidden="true"></i>
+                                            <i class="fa fa-eye" *ngIf="!hide" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <small class="text-danger font-weight-bold"
+                                    *ngIf="ps.invalid && (ps.dirty || ps.touched || hubForm.submitted)">
+                                    <small *ngIf="ps.errors?.['required']">
+                                        Please Enter Password
+                                    </small>
+                                </small>
+
+                                <!--  -->
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</ng-container>

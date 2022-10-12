@@ -1,0 +1,24 @@
+.footer{
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-top: 1px solid #6C9FBD;
+}
+.header{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #6C9FBD;
+    display: flex;
+    width: 100%;
+}
+
+.main {
+    // height: 90vh;
+    height: auto;
+    overflow-y: auto;
+    background-color: #D7D7D7;
+    z-index: 1;
+}
