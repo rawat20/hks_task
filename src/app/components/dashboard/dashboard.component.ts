@@ -10,22 +10,15 @@ declare var $: any;
 })
 export class DashboardComponent implements OnInit {
   posts: any = [];
-  sum = 100;
-  throttle = 300;
-  scrollDistance = 1;
-  scrollUpDistance = 2;
-  direction = "";
-  page = 1;
-  count = 0;
-  pageSize = 3;
-
+  page:number = 1;
+  count:number = 100;
+  pageSizes:any=[];
+  pageSize:number=1;
   constructor(private service: SampleApiService, private router: Router, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
+    this.pageSizes = new Array(10);
     this.getInititalPosts();
-    this.service.getTotalPosts().subscribe((resp: any) => {
-      this.count = resp.length;
-    })
   }
 
 
@@ -36,8 +29,9 @@ export class DashboardComponent implements OnInit {
       this.spinner.hide()
       if (resp !== undefined && resp !== null) {
         if (resp.length > 0) {
-          this.posts = resp;
-          // this.pageSize = resp.length;
+          this.posts = [...resp];
+          this.pageSize = resp.length;
+          console.log(this.posts,this.pageSize)
         }
         else {
           alert("Data not found");
@@ -52,6 +46,8 @@ export class DashboardComponent implements OnInit {
 
   getPage(event: any) {
     this.page = event;
+    document.getElementsByClassName
+    this.getInititalPosts()
   }
 
   getComments(event: any, post_id: number, user_id: number) {
